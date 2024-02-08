@@ -4,7 +4,7 @@ import { voting } from "../../utils/voting-pub-sub";
 
 export async function pollResults(app: FastifyInstance) {
   app.get(
-    "/polls/:polld/results",
+    "/polls/:pollId/results",
     { websocket: true },
     (connection, request) => {
       const getPollParams = z.object({
